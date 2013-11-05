@@ -11,7 +11,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131105215009) do
+ActiveRecord::Schema.define(:version => 20131105230548) do
+
+  create_table "activities", :force => true do |t|
+    t.integer  "workout_id",       :null => false
+    t.integer  "activity_base_id", :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  add_index "activities", ["activity_base_id"], :name => "index_activities_on_activity_base_id"
+  add_index "activities", ["workout_id"], :name => "index_activities_on_workout_id"
+
+  create_table "activity_bases", :force => true do |t|
+    t.string   "set_type",    :null => false
+    t.string   "name",        :null => false
+    t.string   "description", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "activity_bases", ["name"], :name => "index_activity_bases_on_name", :unique => true
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

@@ -13,3 +13,6 @@ Implemented:
 Working (in heroku):
 Users
 	-Sign-Up/Sign-In
+
+Challenges:
+	Used STI to solve differentiation of set types per activity.
