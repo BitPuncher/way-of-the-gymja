@@ -10,6 +10,6 @@ Points, Levels, Badges
 
 Implemented:
 
-Working:
+Working (in heroku):
 Users
 	-Sign-Up/Sign-In
