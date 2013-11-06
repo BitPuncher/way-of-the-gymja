@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131105230548) do
+ActiveRecord::Schema.define(:version => 20131106182551) do
 
   create_table "activities", :force => true do |t|
     t.integer  "workout_id",       :null => false
@@ -32,6 +32,22 @@ ActiveRecord::Schema.define(:version => 20131105230548) do
   end
 
   add_index "activity_bases", ["name"], :name => "index_activity_bases_on_name", :unique => true
+
+  create_table "activity_sets", :force => true do |t|
+    t.integer  "activity_id", :null => false
+    t.string   "type",        :null => false
+    t.integer  "set_number",  :null => false
+    t.integer  "repetitions"
+    t.string   "intensity"
+    t.integer  "weight"
+    t.decimal  "distance"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.integer  "duration"
+  end
+
+  add_index "activity_sets", ["activity_id"], :name => "index_activity_sets_on_activity_id"
+  add_index "activity_sets", ["type"], :name => "index_activity_sets_on_type"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

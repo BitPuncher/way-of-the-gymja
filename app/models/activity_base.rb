@@ -3,4 +3,6 @@ class ActivityBase < ActiveRecord::Base
 
   validates :set_type, :name, :description, :presence => true
   validates :name, :uniqueness => true
+
+  has_many :activities
 end
