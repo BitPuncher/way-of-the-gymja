@@ -5,5 +5,4 @@ class RepetitionSet < ActivitySet
 	validates :intensity, :weight, :distance, :duration, :inclusion => { 
 		:in => [nil] }
 
-	
 end

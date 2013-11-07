@@ -1,14 +1,14 @@
 **Fitocracy Clone
 
 NYI:
-Users
-	-Guest Account
-Workout Logging
 Followers
 Activity Feed
 Points, Levels, Badges
 
 Implemented:
+Workout Logging (model layer)
+Users
+	-Guest Account (without auto-login button)
 
 Working (in heroku):
 Users

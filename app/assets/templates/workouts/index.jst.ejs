@@ -1,0 +1,5 @@
+<% workouts.forEach(function (workout) { %>
+	<div class="workout" data-id="<%= workout.id %>">
+		<%= workout.get('logged_date') %>
+	</div>
+<% }); %>
