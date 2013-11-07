@@ -6,7 +6,9 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <script>
-  	FitocracyClone.current_user = <%= current_user.id %>
+    <% if current_user %>
+    	FitocracyClone.current_user = <%= current_user.id %>
+    <% end %>
   </script>
 </head>
 <body>
