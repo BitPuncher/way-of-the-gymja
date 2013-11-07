@@ -5,8 +5,4 @@ FitocracyClone.Collections.Workouts = Backbone.Collection.extend({
   	return "api/users/" + FitocracyClone.current_user + "/workouts"
   },
 
-  parse: function (response) {
-  	return response['workouts'];
-  }
-
 });

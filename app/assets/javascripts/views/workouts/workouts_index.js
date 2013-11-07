@@ -13,7 +13,7 @@ FitocracyClone.Views.WorkoutsIndex = Backbone.View.extend({
   	this.$el.html(workoutContent);
 
   	//here do activity rendering
-  	debugger
+  	// debugger
 
   	//after that do set rendering
 
