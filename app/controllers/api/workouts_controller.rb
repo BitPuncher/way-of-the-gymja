@@ -23,8 +23,10 @@ class Api::WorkoutsController < ApplicationController
 	end
 
 	def index
-		@workouts = Workout.where(:user_id => current_user.id).all
+		@workouts = Workout.includes(:activities => [:activity_sets, :activity_base])
+			.where(:user_id => current_user.id).all
 
-		render :json => @workouts
+		# render :json => @workouts, :includes => :activities
+		render "api/workouts/index.json"
 	end
 end
