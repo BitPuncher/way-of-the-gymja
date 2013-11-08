@@ -1,3 +1,3 @@
-FitocracyClone.Models.ActivityBase = Backbone.Model.extend({
+WayOfTheGymja.Models.ActivityBase = Backbone.Model.extend({
 	
 })

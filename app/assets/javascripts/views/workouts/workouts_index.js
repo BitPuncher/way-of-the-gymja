@@ -1,4 +1,4 @@
-FitocracyClone.Views.WorkoutsIndex = Backbone.View.extend({
+WayOfTheGymja.Views.WorkoutsIndex = Backbone.View.extend({
 	initialize: function (options) {
 		this.$el = options.$el
 	},

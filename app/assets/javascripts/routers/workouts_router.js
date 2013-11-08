@@ -1,9 +1,10 @@
-FitocracyClone.Routers.Workouts = Backbone.Router.extend({
+WayOfTheGymja.Routers.Workouts = Backbone.Router.extend({
 	initialize: function (options) {
 		this.topLevelElement = options.topLevelElement;
 	},
 
 	routes: {
+		"": "thisaction"
 		"users/:user_id/workouts/index": "workoutsIndex",
 		"users/:user_id/workouts/create": "workoutsCreate",
 	},
@@ -11,15 +12,18 @@ FitocracyClone.Routers.Workouts = Backbone.Router.extend({
 	workoutsIndex: function (user_id) {
 		var that = this;
 
-		FitocracyClone.UserWorkouts = new FitocracyClone.Collections.Workouts();
-		FitocracyClone.UserWorkouts.fetch({
+		WayOfTheGymja.UserWorkouts = new WayOfTheGymja.Collections.Workouts();
+		WayOfTheGymja.UserWorkouts.fetch({
 			success: function() {
-				var indexView = new FitocracyClone.Views.WorkoutsIndex({
-					collection: FitocracyClone.UserWorkouts,
-					$el: $('.userWorkouts')
+				var content = $('#content');
+				content.html('');
+
+				var indexView = new WayOfTheGymja.Views.WorkoutsIndex({
+					collection: WayOfTheGymja.UserWorkouts,
+					$el: $('<div class="userWorkouts"></div>')
 				});
 
-				indexView.render();
+				content.append(indexView.render().$el);
 			}
 		});
 	},

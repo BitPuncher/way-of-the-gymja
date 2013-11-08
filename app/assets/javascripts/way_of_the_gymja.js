@@ -1,10 +1,10 @@
-window.FitocracyClone = {
+window.WayOfTheGymja = {
   Models: {},
   Collections: {},
   Views: {},
   Routers: {},
   initialize: function() {
-  	var workoutRouter = new FitocracyClone.Routers.Workouts({
+  	var workoutRouter = new WayOfTheGymja.Routers.Workouts({
   		topLevelElement: $('.content')
   	});
   	Backbone.history.start();
@@ -12,5 +12,5 @@ window.FitocracyClone = {
 };
 
 $(document).ready(function(){
-  FitocracyClone.initialize();
+  WayOfTheGymja.initialize();
 });

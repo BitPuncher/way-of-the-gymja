@@ -1,4 +1,4 @@
-FitocracyClone.Models.ActivitySet = Backbone.Model.extend({
+WayOfTheGymja.Models.ActivitySet = Backbone.Model.extend({
 	
 	MEASURABLES: ["distance", "duration", "intensity", "repetitions", "weight"],
 

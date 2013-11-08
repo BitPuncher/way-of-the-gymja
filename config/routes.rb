@@ -1,4 +1,4 @@
-FitocracyClone::Application.routes.draw do
+WayOfTheGymja::Application.routes.draw do
   devise_for :users
 
   namespace "api" do
@@ -13,5 +13,5 @@ FitocracyClone::Application.routes.draw do
 
   resources :users, :only => [:index, :show]
 
-  root :to => "home#index"
+  root :to => "static_pages#root"
 end

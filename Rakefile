@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-FitocracyClone::Application.load_tasks
+WayOfTheGymja::Application.load_tasks

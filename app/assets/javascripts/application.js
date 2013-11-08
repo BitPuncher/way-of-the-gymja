@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require underscore
 //= require backbone
-//= require fitocracy_clone
+//= require way_of_the_gymja
 //= require_tree ../templates
 //= require_tree ./models
 //= require_tree ./collections

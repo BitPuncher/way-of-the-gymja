@@ -1,8 +1,8 @@
-FitocracyClone.Collections.Workouts = Backbone.Collection.extend({
+WayOfTheGymja.Collections.Workouts = Backbone.Collection.extend({
 
-  model: FitocracyClone.Models.Workout,
+  model: WayOfTheGymja.Models.Workout,
   url: function () {
-  	return "api/users/" + FitocracyClone.current_user + "/workouts"
+  	return "api/users/" + WayOfTheGymja.current_user + "/workouts"
   },
 
 });

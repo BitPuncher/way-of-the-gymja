@@ -1,7 +1,7 @@
-FitocracyClone.Models.Workout = Backbone.Model.extend({
+WayOfTheGymja.Models.Workout = Backbone.Model.extend({
 	parse: function (response) {
 
-		this.activities = new FitocracyClone.Collections.Activities(
+		this.activities = new WayOfTheGymja.Collections.Activities(
 			response['activities'],
 			{ parse: true });
 		// debugger

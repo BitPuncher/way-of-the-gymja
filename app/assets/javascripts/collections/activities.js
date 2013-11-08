@@ -1,3 +1,3 @@
-FitocracyClone.Collections.Activities = Backbone.Collection.extend({
-	model: FitocracyClone.Models.Activity
+WayOfTheGymja.Collections.Activities = Backbone.Collection.extend({
+	model: WayOfTheGymja.Models.Activity
 })

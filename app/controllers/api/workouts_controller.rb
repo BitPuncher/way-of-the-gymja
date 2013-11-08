@@ -18,7 +18,8 @@ class Api::WorkoutsController < ApplicationController
 	end
 
 	def show
-		@workout = Workout.find(params[:id])
+		@workout = Workout.includes(:activities => [:activity_sets, :activity_base])
+			.find(params[:id])
 		render :json => @workout
 	end
 
@@ -26,7 +27,6 @@ class Api::WorkoutsController < ApplicationController
 		@workouts = Workout.includes(:activities => [:activity_sets, :activity_base])
 			.where(:user_id => current_user.id).all
 
-		# render :json => @workouts, :includes => :activities
 		render "api/workouts/index.json"
 	end
 end
