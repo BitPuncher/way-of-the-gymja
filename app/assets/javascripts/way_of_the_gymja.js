@@ -5,12 +5,12 @@ window.WayOfTheGymja = {
   Routers: {},
   initialize: function() {
   	var workoutRouter = new WayOfTheGymja.Routers.Workouts({
-  		topLevelElement: $('.content')
+  		topLevelElement: $('#backbone-content')
   	});
   	Backbone.history.start();
   }
 };
 
-$(document).ready(function(){
-  WayOfTheGymja.initialize();
-});
+// $(document).ready(function(){
+//   WayOfTheGymja.initialize();
+// });

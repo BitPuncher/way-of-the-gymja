@@ -6,7 +6,7 @@
 		<div class="activity" data-id="<%= activity.id %>">
 			<p><%= activity.activity_base.get('name') %></p>
 			<% activity.activity_sets.forEach(function (set) { %>
-				<div class="set" data-id="<%= set.id %>">
+				<div class="set offset1" data-id="<%= set.id %>">
 				Set: <%= set.escape('set_number') %> | <%= set.describe() %>
 				</div>
 			<% }) %>

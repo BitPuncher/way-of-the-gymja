@@ -4,7 +4,7 @@ WayOfTheGymja.Routers.Workouts = Backbone.Router.extend({
 	},
 
 	routes: {
-		"": "thisaction"
+		"": "workoutsIndex",
 		"users/:user_id/workouts/index": "workoutsIndex",
 		"users/:user_id/workouts/create": "workoutsCreate",
 	},
@@ -15,15 +15,16 @@ WayOfTheGymja.Routers.Workouts = Backbone.Router.extend({
 		WayOfTheGymja.UserWorkouts = new WayOfTheGymja.Collections.Workouts();
 		WayOfTheGymja.UserWorkouts.fetch({
 			success: function() {
-				var content = $('#content');
-				content.html('');
+				// debugger
+				
+				that.topLevelElement.html('');
 
 				var indexView = new WayOfTheGymja.Views.WorkoutsIndex({
 					collection: WayOfTheGymja.UserWorkouts,
 					$el: $('<div class="userWorkouts"></div>')
 				});
 
-				content.append(indexView.render().$el);
+				that.topLevelElement.append(indexView.render().$el);
 			}
 		});
 	},

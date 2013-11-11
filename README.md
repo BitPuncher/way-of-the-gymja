@@ -1,5 +1,10 @@
 **Fitocracy Clone
 
+TODO:
+Fill in user profile content selector with a new view.
+Implement workout creation.
+Add basic user data to display on profile page. Iga and Koga clans.
+
 NYI:
 Followers
 Activity Feed
