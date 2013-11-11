@@ -3,7 +3,7 @@
 TODO:
 Fill in user profile content selector with a new view.
 Implement workout creation.
-Add basic user data to display on profile page. Iga and Koga clans.
+Iga and Koga clans.
 
 NYI:
 Followers
@@ -18,6 +18,7 @@ Users
 Working (in heroku):
 Users
 	-Sign-Up/Sign-In
+Add basic user data to display on profile page.
 
 Challenges:
 	Used STI to solve differentiation of set types per activity.

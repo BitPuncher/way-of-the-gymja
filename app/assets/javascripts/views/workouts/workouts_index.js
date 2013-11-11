@@ -12,12 +12,6 @@ WayOfTheGymja.Views.WorkoutsIndex = Backbone.View.extend({
 
   	this.$el.html(workoutContent);
 
-  	//here do activity rendering
-  	// debugger
-
-  	//after that do set rendering
-
-
   	return this;
   },
 
