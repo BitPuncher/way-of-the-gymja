@@ -6,7 +6,10 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
-  # attr_accessible :title, :body
+  attr_accessible :gender, :birthday, :height
+
+  validates :gender, :inclusion => { :in => ["male", "female"] }
+  validates :height, :numericality => { :greater_than => 0, :only_integer => true}
 
   has_many :workouts
 end

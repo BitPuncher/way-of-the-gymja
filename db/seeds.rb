@@ -19,7 +19,8 @@ ActiveRecord::Base.transaction do
 		description: "How many times do I have to tell you? The first move is
 		 always a feint.", set_type: "RepetitionSet" })
 
-	guest = User.create({ email: "guest@mail.com", password: "password" })
+	guest = User.create({ email: "guest@mail.com", password: "password",
+		gender: "male", height: 66, birthday: "1985-09-01" })
 
 	# First Workout
 

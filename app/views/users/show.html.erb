@@ -20,6 +20,20 @@
   </div>
 </div>
 
+<div class="user-attributes row">
+  <div class="span2 offset4 user-age">
+    <%= @user.birthday %>
+  </div>
+
+  <div class="span2 user-height">
+    <%= @user.height / 12 %>'<%= @user.height % 12 %>"
+  </div>
+
+  <div class="span2 user-gender">
+    <%= @user.gender %>
+  </div>
+</div>
+
 <div class="row">
   <div class="span3" id="content-selector">
   </div>
