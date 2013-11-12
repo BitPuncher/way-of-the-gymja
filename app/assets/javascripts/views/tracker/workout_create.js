@@ -5,11 +5,12 @@ WayOfTheGymja.Views.WorkoutForm = Backbone.View.extend({
 
 	template: JST['tracker/create'],
 
+	events: {
+		"submit form": "submitForm",
+	},
 
 	render: function () {
-		var content = this.template({
-
-		});
+		var content = this.template({});
 
 		this.$el.html(content);
 		return this;
@@ -30,4 +31,13 @@ WayOfTheGymja.Views.WorkoutForm = Backbone.View.extend({
 
 		form.append(formEntry.render().$el);
 	},
+
+	submitForm: function (event) {
+		event.preventDefault();
+		debugger;
+		var workout = new WayOfTheGymja.Models.Workout();
+		workout.set('logged_date', Date(Date.now()));
+
+		// var 
+	}
 })
