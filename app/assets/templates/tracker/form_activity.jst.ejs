@@ -1,7 +1,10 @@
-<div class="row">
+<div class="row activity_header">
 	<div class="span8">
-		<%= activity_base.get('name') %>
-		<button class="addSet" data-base_id="<%= activity_base.id %>">Add Set
+		<%= activityBase.get('name') %>
+		<input type="hidden" name="workout[activities]
+			[<%= activityBase.id %>][activity_base_id]"
+			value="<%= activityBase.id %>">
+		<button class="addSet" data-base_id="<%= activityBase.id %>">Add Set
 		</button>
 		<button class="removeActivity">Remove Activity</button>
 	</div>

@@ -17,8 +17,8 @@ WayOfTheGymja.Views.WorkoutForm = Backbone.View.extend({
 	},
 
 	addInput: function (activity_base) {
-		var form = this.$el.find('form');
-		if (form.find('.' + activity_base.get('set_type')).length > 0) {
+		var formInputs = this.$el.find('#workout_activities');
+		if (formInputs.find('.' + activity_base.get('set_type')).length > 0) {
 			return;
 		}
 
@@ -29,7 +29,8 @@ WayOfTheGymja.Views.WorkoutForm = Backbone.View.extend({
 			$el: el,
 		})
 
-		form.append(formEntry.render().$el);
+		formInputs.append(formEntry.render().$el);
+		this.inputCounter += 1;
 	},
 
 	submitForm: function (event) {
@@ -37,7 +38,7 @@ WayOfTheGymja.Views.WorkoutForm = Backbone.View.extend({
 		debugger;
 		var workout = new WayOfTheGymja.Models.Workout();
 		workout.set('logged_date', Date(Date.now()));
-
+		
 		// var 
 	}
 })

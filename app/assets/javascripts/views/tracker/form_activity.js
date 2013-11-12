@@ -1,6 +1,6 @@
 WayOfTheGymja.Views.FormActivity = Backbone.View.extend({
 	initialize: function (options) {
-		this.activity_base = options.activity_base;
+		this.activityBase = options.activity_base;
 		this.$el = options.$el;
 	},
 
@@ -12,13 +12,14 @@ WayOfTheGymja.Views.FormActivity = Backbone.View.extend({
 	},
 
 	render: function () {
+		this.$el.find('.activity_header')
 		this.$el.append(
 			this.template({
-				activity_base: this.activity_base,
+				activityBase: this.activityBase,
 			})
 		);
 
-		this.trigger('.addSet');
+		this.trigger('.addSet'); //doesn't do anything
 
 		return this;
 	},
@@ -30,11 +31,11 @@ WayOfTheGymja.Views.FormActivity = Backbone.View.extend({
 		var content = $('<div class="row" data-setNum=' + inputNumber + '></div>');
 
 		var template_string = 'activity_bases/' +
-			this.activity_base.get('set_type').toLowerCase();
+			this.activityBase.get('set_type').toLowerCase();
 
 		content.append(JST[template_string]({
 			setNum: inputNumber,
-			base_id: this.activity_base.id,
+			activityBase: this.activityBase,
 		}));
 
 		this.$el.append(content);

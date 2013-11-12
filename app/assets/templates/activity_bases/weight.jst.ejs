@@ -1,14 +1,23 @@
 <div class="span2">
-	<label for="set<%= setNum %>base<%= base_id %>">Set: </label>
-	<input type="text" readonly value="<%= setNum %>" name="set[set_number]" id="set<%= setNum %>base<%= base_id %>"></input>
+	<label for="set<%= setNum %>base<%= activityBase.id %>">Set: </label>
+	<input type="text" readonly value="<%= setNum %>" 
+	name="workout[activities][<%= activityBase.id %>][activity_sets]
+	[<%= setNum - 1 %>][set_number]" id="set<%= setNum %>base<%= activityBase.id %>"></input>
+
+	<input type="hidden" value="<%= activityBase.get('set_type') %>"
+		name="workout[activities][<%= activityBase.id %>][activity_sets][<%= setNum - 1 %>][type]"></input>
 </div>
 
 <div class="span2">
-	<label for="weight_set<%= setNum %>base<%= base_id %>">Weight: </label>
-	<input type="text" placeholder="0" name="set[weight]" id="weight_set<%= setNum %>base<%= base_id %>"></input>
+	<label for="weight_set<%= setNum %>base<%= activityBase.id %>">Weight: </label>
+	<input type="text" placeholder="0" 
+	name="workout[activities][<%= activityBase.id %>][activity_sets]
+	[<%= setNum - 1 %>][weight]" id="weight_set<%= setNum %>base<%= activityBase.id %>"></input>
 </div>
 
 <div class="span2">
-	<label for="repetitions_set<%= setNum %>base<%= base_id %>">Repetitions: </label>
-	<input type="text" placeholder="0" name="set[repetitions]" id="repetitions_set<%= setNum %>base<%= base_id %>"></input>
+	<label for="repetitions_set<%= setNum %>base<%= activityBase.id %>">Repetitions: </label>
+	<input type="text" placeholder="0" 
+	name="workout[activities][<%= activityBase.id %>][activity_sets]
+	[<%= setNum - 1 %>][repetitions]" id="repetitions_set<%= setNum %>base<%= activityBase.id %>"></input>
 </div>
