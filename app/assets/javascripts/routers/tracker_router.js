@@ -22,8 +22,14 @@ WayOfTheGymja.Routers.Tracker = Backbone.Router.extend({
 				});
 
 				//get new workout form
-				var formView = new WayOfTheGymja.Views.WorkoutForm({
+				var date = new Date();
+				var dateString = (date.getYear() + 1900).toString() + "-" +
+					date.getDate().toString() + "-" + (date.getMonth() + 1).toString();
+
+
+				var formView = new WayOfTheGymja.Views.WorkoutCreate({
 					$el: $('<div class="span8" id="new-workout">'),
+					date: dateString,
 				});
 
 				formView.listenTo(listView, 'addInput', formView.addInput);

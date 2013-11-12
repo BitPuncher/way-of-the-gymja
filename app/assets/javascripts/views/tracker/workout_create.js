@@ -1,6 +1,7 @@
-WayOfTheGymja.Views.WorkoutForm = Backbone.View.extend({
+WayOfTheGymja.Views.WorkoutCreate = Backbone.View.extend({
 	initialize: function (options) {
 		this.$el = options.$el;
+		this.date = options.date;
 	},
 
 	template: JST['tracker/create'],
@@ -10,7 +11,9 @@ WayOfTheGymja.Views.WorkoutForm = Backbone.View.extend({
 	},
 
 	render: function () {
-		var content = this.template({});
+		var content = this.template({
+			date: this.date,
+		});
 
 		this.$el.html(content);
 		return this;
@@ -35,10 +38,43 @@ WayOfTheGymja.Views.WorkoutForm = Backbone.View.extend({
 
 	submitForm: function (event) {
 		event.preventDefault();
-		debugger;
-		var workout = new WayOfTheGymja.Models.Workout();
-		workout.set('logged_date', Date(Date.now()));
 		
+		workoutData = $(event.target).serializeJSON()['workout'];
+		if (typeof workoutData.activities == 'undefined') {
+			this.formValidationError('A workout must contain at least 1 Activity.');
+			return;
+		};
+
+
+		workoutData.activities = workoutData.activities.filter(function (el) {
+			return true;
+		});
+
+		for (var i = 0; i < workoutData.activities.length; i++) {
+			if (typeof workoutData.activities[i].activity_sets === 'undefined') {
+				this.formValidationError('All activities must have at least 1 set.');
+				return;
+			}
+		} // might be unnecessary to check now.
+
+		this.removeAlert();
+
+		var workout = new WayOfTheGymja.Models.Workout(workoutData, { parse: true });
+		
+		debugger;
+
 		// var 
+	},
+
+	formValidationError: function (error) {
+		this.removeAlert();
+		this.$el.prepend('<div class="alert"><button type="button"' +
+				'class="close" data-dismiss="alert">&times;</button>' +
+				'<strong>Warning!</strong> ' + error +
+				'</div>');
+	},
+
+	removeAlert: function () {
+		this.$el.find('.alert').remove();
 	}
 })

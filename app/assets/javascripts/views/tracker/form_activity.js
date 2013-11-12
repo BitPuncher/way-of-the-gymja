@@ -19,13 +19,15 @@ WayOfTheGymja.Views.FormActivity = Backbone.View.extend({
 			})
 		);
 
-		this.trigger('.addSet'); //doesn't do anything
+		this.addSet(null);
 
 		return this;
 	},
 
 	addSet: function (event) {
-		event.preventDefault();
+		if (event != null) {
+			event.preventDefault();	
+		}
 
 		var inputNumber = this.$el.find('.row').length;
 		var content = $('<div class="row" data-setNum=' + inputNumber + '></div>');

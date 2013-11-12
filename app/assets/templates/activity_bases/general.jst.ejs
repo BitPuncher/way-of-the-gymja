@@ -1,8 +1,7 @@
 <div class="span2">
 	<label for="set<%= setNum %>base<%= activityBase.id %>">Set: </label>
 	<input type="text" readonly value="<%= setNum %>" 
-	name="workout[activities][<%= activityBase.id %>][activity_sets]
-	[<%= setNum - 1 %>][set_number]" id="set<%= setNum %>base<%= activityBase.id %>"></input>
+	name="workout[activities][<%= activityBase.id %>][activity_sets][<%= setNum - 1 %>][set_number]" id="set<%= setNum %>base<%= activityBase.id %>"></input>
 
 	<input type="hidden" value="<%= activityBase.get('set_type') %>"
 		name="workout[activities][<%= activityBase.id %>][activity_sets][<%= setNum - 1 %>][type]"></input>
@@ -11,13 +10,11 @@
 <div class="span2">
 	<label for="duration_set<%= setNum %>base<%= activityBase.id %>">Duration: </label>
 	<input type="text" placeholder="0" 
-	name="workout[activities][<%= activityBase.id %>][activity_sets]
-	[<%= setNum - 1 %>][duration]" id="duration_set<%= setNum %>base<%= activityBase.id %>"></input>
+	name="workout[activities][<%= activityBase.id %>][activity_sets][<%= setNum - 1 %>][duration]" id="duration_set<%= setNum %>base<%= activityBase.id %>"></input>
 </div>
 
 <div class="span2">
 	<label for="intensity_set<%= setNum %>base<%= activityBase.id %>">Intensity: </label>
 	<input type="text" placeholder="0" 
-	name="workout[activities][<%= activityBase.id %>][activity_sets]
-	[<%= setNum - 1 %>][intensity]" id="intensity_set<%= setNum %>base<%= activityBase.id %>"></input>
+	name="workout[activities][<%= activityBase.id %>][activity_sets][<%= setNum - 1 %>][intensity]" id="intensity_set<%= setNum %>base<%= activityBase.id %>"></input>
 </div>

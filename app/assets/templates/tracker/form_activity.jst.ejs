@@ -1,8 +1,7 @@
 <div class="row activity_header">
 	<div class="span8">
 		<%= activityBase.get('name') %>
-		<input type="hidden" name="workout[activities]
-			[<%= activityBase.id %>][activity_base_id]"
+		<input type="hidden" name="workout[activities][<%= activityBase.id %>][activity_base_id]"
 			value="<%= activityBase.id %>">
 		<button class="addSet" data-base_id="<%= activityBase.id %>">Add Set
 		</button>
