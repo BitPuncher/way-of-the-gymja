@@ -1,4 +1,4 @@
-class WeightSet < ActivitySet
+class Weight < ActivitySet
 	attr_accessible :weight, :repetitions
 
 	validates :weight, :repetitions, :presence => true

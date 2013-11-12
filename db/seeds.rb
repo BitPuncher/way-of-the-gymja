@@ -7,17 +7,17 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 ActiveRecord::Base.transaction do
 	ActivityBase.create({ name: "Water Running", 
-		description: "To splash is to err.", set_type: "DistanceSet" })
+		description: "To splash is to err.", set_type: "Distance" })
 	ActivityBase.create({ name: "Stealth", description: "Ninja vanish!",
-		set_type: "DurationSet" })
+		set_type: "Duration" })
 	ActivityBase.create({ name: "Taijutsu", 
-		description: "The lotus of Konoha blooms twice.", set_type: "GeneralSet" })
+		description: "The lotus of Konoha blooms twice.", set_type: "General" })
 	ActivityBase.create({ name: "Boulder Toss", 
 		description: "Sorry I'm late, I'm afraid I got lost on the path of life.",
-		set_type: "WeightSet" })
+		set_type: "Weight" })
 	ActivityBase.create({ name: "Genjutsu",
 		description: "How many times do I have to tell you? The first move is
-		 always a feint.", set_type: "RepetitionSet" })
+		 always a feint.", set_type: "Repetition" })
 
 	guest = User.create({ email: "guest@mail.com", password: "password",
 		gender: "male", height: 66, birthday: "1985-09-01" })

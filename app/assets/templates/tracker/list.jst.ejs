@@ -1,0 +1,8 @@
+<% activities.forEach(function (activity){ %>
+	<div class="row">
+		<div class="span4 activity" data-id="<%= activity.id %>">
+			<%= activity.get('name') %>
+			<button class="addInput" data-id="<%= activity.id %>">+</button>
+		</div>
+	</div>
+<% }) %>

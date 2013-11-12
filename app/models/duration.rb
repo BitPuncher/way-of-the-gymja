@@ -1,4 +1,4 @@
-class DurationSet < ActivitySet
+class Duration < ActivitySet
 	attr_accessible :duration
 
 	validates :duration, :presence => true

@@ -4,9 +4,9 @@ window.WayOfTheGymja = {
   Views: {},
   Routers: {},
   initialize: function() {
-  	var workoutRouter = new WayOfTheGymja.Routers.Workouts({
-  		topLevelElement: $('#backbone-content')
-  	});
+  	// new WayOfTheGymja.Routers.Workouts({
+  	// 	topLevelElement: $('#backbone-content')
+  	// });
   	Backbone.history.start();
   }
 };

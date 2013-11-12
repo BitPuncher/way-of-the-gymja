@@ -1,4 +1,4 @@
-class GeneralSet < ActivitySet
+class General < ActivitySet
 	attr_accessible :duration, :intensity
 
 	validates :duration, :intensity, :presence => true

@@ -1,4 +1,4 @@
-class DistanceSet < ActivitySet
+class Distance < ActivitySet
 	attr_accessible :duration, :distance
 
 	validates :duration, :distance, :presence => true

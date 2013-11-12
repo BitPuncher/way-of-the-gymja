@@ -15,7 +15,6 @@ WayOfTheGymja.Routers.Workouts = Backbone.Router.extend({
 		WayOfTheGymja.UserWorkouts = new WayOfTheGymja.Collections.Workouts();
 		WayOfTheGymja.UserWorkouts.fetch({
 			success: function() {
-				// debugger
 				
 				that.topLevelElement.html('');
 

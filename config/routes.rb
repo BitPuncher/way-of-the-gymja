@@ -5,13 +5,13 @@ WayOfTheGymja::Application.routes.draw do
     scope "users/:user_id/" do
   		resources :workouts, :only => [:create, :index]
     end
-  end
 
-  namespace "api" do
-  	resources :workouts, :only => [:show, :destroy]
+    resources :workouts, :only => [:show, :destroy]
+    resources :activity_bases, :only => [:index]
   end
 
   resources :users, :only => [:index, :show]
 
+  get "track", :to => "static_pages#track"
   root :to => "static_pages#root"
 end

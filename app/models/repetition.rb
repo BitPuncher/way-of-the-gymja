@@ -1,4 +1,4 @@
-class RepetitionSet < ActivitySet
+class Repetition < ActivitySet
 	attr_accessible :repetitions
 
 	validates :repetitions, :presence => true

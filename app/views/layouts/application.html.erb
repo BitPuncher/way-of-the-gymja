@@ -12,9 +12,21 @@
   </script>
 </head>
 <body>
+<!-- 
 	<p class="notice"><%= notice %></p>
-	<p class="alert"><%= alert %></p>
-	
+	<p class="alert"><%= alert %></p> -->
+
+<%= nav_bar :fixed => :top do %>
+  <%= menu_group do %>
+    <%= menu_item "Profile", current_user ? user_url(current_user) : new_user_session_url %>
+    <%= menu_item "Track", track_url %>
+  <% end %>
+<% end %>
+
+<div class="row">
+  <div class="logo">
+  </div>
+</div>
 
 <%= yield %>
 
