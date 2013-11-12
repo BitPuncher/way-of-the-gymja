@@ -8,6 +8,7 @@ WayOfTheGymja.Views.FormActivity = Backbone.View.extend({
 
 	events: {
 		"click .addSet": "addSet",
+		"click .removeActivity": "removeActivity",
 	},
 
 	render: function () {
@@ -17,13 +18,14 @@ WayOfTheGymja.Views.FormActivity = Backbone.View.extend({
 			})
 		);
 
+		this.trigger('.addSet');
+
 		return this;
 	},
 
 	addSet: function (event) {
 		event.preventDefault();
 
-		// debugger;
 		var inputNumber = this.$el.find('.row').length;
 		var content = $('<div class="row" data-setNum=' + inputNumber + '></div>');
 
@@ -37,4 +39,8 @@ WayOfTheGymja.Views.FormActivity = Backbone.View.extend({
 
 		this.$el.append(content);
 	},
+
+	removeActivity: function () {
+		this.remove();
+	}
 })
