@@ -11,7 +11,7 @@ Activity Feed
 Points, Levels, Badges
 
 Implemented:
-Workout Logging (model layer)
+Workout Logging (model layer, dynamic form)
 Users
 	-Guest Account (without auto-login button)
 

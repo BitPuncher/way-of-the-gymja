@@ -20,7 +20,7 @@ WayOfTheGymja.Views.WorkoutCreate = Backbone.View.extend({
 	},
 
 	addInput: function (activity_base) {
-		var formInputs = this.$el.find('#workout_activities');
+		var formInputs = this.$el.find('#workout-activities');
 		if (formInputs.find('.' + activity_base.get('set_type')).length > 0) {
 			return;
 		}
@@ -39,38 +39,45 @@ WayOfTheGymja.Views.WorkoutCreate = Backbone.View.extend({
 	submitForm: function (event) {
 		event.preventDefault();
 		
-		workoutData = $(event.target).serializeJSON()['workout'];
-		if (typeof workoutData.activities == 'undefined') {
-			this.formValidationError('A workout must contain at least 1 Activity.');
+		workoutData = $(event.target).serializeJSON();
+
+		if (typeof workoutData.workout.activities == 'undefined') {
+			this.formAlert('A workout must contain at least 1 Activity.', "alert-error");
 			return;
 		};
 
-
-		workoutData.activities = workoutData.activities.filter(function (el) {
-			return true;
-		});
-
-		for (var i = 0; i < workoutData.activities.length; i++) {
-			if (typeof workoutData.activities[i].activity_sets === 'undefined') {
-				this.formValidationError('All activities must have at least 1 set.');
-				return;
+		workoutData.workout.activities = workoutData.workout.activities.filter(
+			function (el) {
+				return true;
 			}
-		} // might be unnecessary to check now.
+		);
 
 		this.removeAlert();
 
 		var workout = new WayOfTheGymja.Models.Workout(workoutData, { parse: true });
-		
-		debugger;
+		var that = this;
+
+		workout.save({}, {
+			success: function(response) {
+				that.formAlert("Workout Saved Successfully!", "alert-success")
+				var formDate = that.$el.find('#workout_date').parent().parent();
+				that.$el.find('#workout-activities').html(formDate);
+			},
+
+			error: function(response) {
+				that.formAlert("Invalid. You broke it", "alert-error");
+			}
+		});
 
 		// var 
 	},
 
-	formValidationError: function (error) {
+	formAlert: function (message, classToggle) {
 		this.removeAlert();
-		this.$el.prepend('<div class="alert"><button type="button"' +
+		this.$el.prepend('<div class="alert ' + classToggle +
+				'"><button type="button"' +
 				'class="close" data-dismiss="alert">&times;</button>' +
-				'<strong>Warning!</strong> ' + error +
+				'<strong>Warning!</strong> ' + message +
 				'</div>');
 	},
 

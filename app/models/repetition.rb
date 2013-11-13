@@ -4,5 +4,4 @@ class Repetition < ActivitySet
 	validates :repetitions, :presence => true
 	validates :intensity, :weight, :distance, :duration, :inclusion => { 
 		:in => [nil] }
-
 end

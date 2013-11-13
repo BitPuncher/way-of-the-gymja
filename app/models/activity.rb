@@ -1,9 +1,9 @@
 class Activity < ActiveRecord::Base
 	attr_accessible :workout_id, :activity_base_id
 
-	validates :workout_id, :activity_base_id, :presence => true
+	validates :activity_base_id, :presence => true
 
-	belongs_to :workout
+	belongs_to :workout, :inverse_of => :activities
 	belongs_to :activity_base
-	has_many :activity_sets # , :class_name => self.activity_base.set_type
+	has_many :activity_sets, :inverse_of => :activity
 end

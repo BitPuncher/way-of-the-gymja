@@ -3,6 +3,6 @@ class Workout < ActiveRecord::Base
 
   validates :logged_date, :user_id, :presence => true
 
-  belongs_to :user
-  has_many :activities
+  belongs_to :user, :inverse_of => :workouts
+  has_many :activities, :inverse_of => :workout
 end

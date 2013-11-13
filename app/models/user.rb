@@ -11,5 +11,5 @@ class User < ActiveRecord::Base
   validates :gender, :inclusion => { :in => ["male", "female"] }
   validates :height, :numericality => { :greater_than => 0, :only_integer => true}
 
-  has_many :workouts
+  has_many :workouts, :inverse_of => :user
 end

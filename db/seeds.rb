@@ -30,22 +30,22 @@ ActiveRecord::Base.transaction do
 	act2 = workout.activities.create({ activity_base_id:2 })
 	act3 = workout.activities.create({ activity_base_id:5 })
 
-	act1.activity_sets << act1.activity_base.set_type.constantize.create({
-		distance:50, duration:300, set_number:1 })
-	act1.activity_sets << act1.activity_base.set_type.constantize.create({
-		distance:100, duration:450, set_number:2 })
-	act1.activity_sets << act1.activity_base.set_type.constantize.create({
-		distance:50, duration:300, set_number:3 })
+	act1.activity_base.set_type.constantize.create({
+		distance:50, duration:300, set_number:1, activity_id:act1.id })
+	act1.activity_base.set_type.constantize.create({
+		distance:100, duration:450, set_number:2, activity_id:act1.id })
+	act1.activity_base.set_type.constantize.create({
+		distance:50, duration:300, set_number:3, activity_id:act1.id })
 
-	act2.activity_sets << act2.activity_base.set_type.constantize.create({
-		duration:300, set_number:1 })
-	act2.activity_sets << act2.activity_base.set_type.constantize.create({
-		duration:3600, set_number:2 })
+	act2.activity_base.set_type.constantize.create({
+		duration:300, set_number:1, activity_id:act2.id })
+	act2.activity_base.set_type.constantize.create({
+		duration:3600, set_number:2, activity_id:act2.id })
 
-	act3.activity_sets << act3.activity_base.set_type.constantize.create({
-		repetitions:15, set_number:1 })
-	act3.activity_sets << act3.activity_base.set_type.constantize.create({
-		repetitions:15, set_number:2 })
+	act3.activity_base.set_type.constantize.create({
+		repetitions:15, set_number:1, activity_id:act3.id })
+	act3.activity_base.set_type.constantize.create({
+		repetitions:15, set_number:2, activity_id:act3.id })
 
 	# Second Workout
 
@@ -54,12 +54,12 @@ ActiveRecord::Base.transaction do
 	act1 = workout.activities.create({ activity_base_id:3 })
 	act2 = workout.activities.create({ activity_base_id:4 })
 
-	act1.activity_sets << act1.activity_base.set_type.constantize.create({
-		intensity:2, duration:200, set_number:1 })
+	act1.activity_base.set_type.constantize.create({
+		intensity:2, duration:200, set_number:1, activity_id:act1.id })
 
-	act2.activity_sets << act2.activity_base.set_type.constantize.create({
-		repetitions:15, weight:5, set_number:1 })
-	act2.activity_sets << act2.activity_base.set_type.constantize.create({
-		repetitions:15, weight:5, set_number:2 })
+	act2.activity_base.set_type.constantize.create({
+		repetitions:15, weight:5, set_number:1, activity_id:act2.id })
+	act2.activity_base.set_type.constantize.create({
+		repetitions:15, weight:5, set_number:2, activity_id:act2.id })
 
 end

@@ -3,10 +3,10 @@ WayOfTheGymja::Application.routes.draw do
 
   namespace "api" do
     scope "users/:user_id/" do
-  		resources :workouts, :only => [:create, :index]
+  		resources :workouts, :only => [:index]
     end
 
-    resources :workouts, :only => [:show, :destroy]
+    resources :workouts, :only => [:show, :destroy, :create]
     resources :activity_bases, :only => [:index]
   end
 
