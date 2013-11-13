@@ -12,14 +12,23 @@
   </script>
 </head>
 
-<%= nav_bar :fixed => :top do %>
-  <%= menu_group do %>
-    <%= menu_item "Profile", current_user ? user_url(current_user) : new_user_session_url %>
-    <%= menu_item "Track", track_url %>
-  <% end %>
-<% end %>
+
 
 <body>
+
+<div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="<%= root_url %>">Way of the Gymja</a>
+    <ul class="nav">
+      <!-- <li class="active"><a href="#"></a></li> -->
+      <% if current_user %>
+        <li><a href="<%= user_url(current_user) %>">Profile</a></li>
+        <li><a href="<%= track_url %>">Track</a></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
 <!-- 
 	<p class="notice"><%= notice %></p>
 	<p class="alert"><%= alert %></p> -->
@@ -29,7 +38,9 @@
   </div>
 </div>
 
-<%= yield %>
+<div class="content">
+  <%= yield %>
+</div>
 
 </body>
 </html>

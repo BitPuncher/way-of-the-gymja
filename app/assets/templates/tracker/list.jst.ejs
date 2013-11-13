@@ -1,8 +1,17 @@
 <% activities.forEach(function (activity){ %>
 	<div class="row">
 		<div class="span4 activity" data-id="<%= activity.id %>">
-			<%= activity.get('name') %>
+			<a class="btn" data-target="#<%= activity.id %>-modal" data-toggle="modal"><%= activity.get('name') %></a>
 			<button class="addInput" data-id="<%= activity.id %>">+</button>
+		</div>
+	</div>
+	<div id="<%= activity.id %>-modal" class="modal hide">
+		<div class="modal-header">
+			<h2><%= activity.get('name') %></h2>
+		</div>
+		<div class="modal-body">
+			<p class="description text-center"><%= activity.get('description') %></p>
+			<h5 class="flavor text-right"><em><%= activity.get('flavor') %></em></h5>
 		</div>
 	</div>
 <% }) %>

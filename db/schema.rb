@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131111173254) do
+ActiveRecord::Schema.define(:version => 20131113203117) do
 
   create_table "activities", :force => true do |t|
     t.integer  "workout_id",       :null => false
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(:version => 20131111173254) do
     t.string   "description", :null => false
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "flavor"
   end
 
   add_index "activity_bases", ["name"], :name => "index_activity_bases_on_name", :unique => true

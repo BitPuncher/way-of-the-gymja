@@ -6,7 +6,6 @@ WayOfTheGymja.Models.Workout = Backbone.Model.extend({
 		this.activities = new WayOfTheGymja.Collections.Activities(
 			response['activities'],
 			{ parse: true });
-		// debugger
 		delete response['activities'];
 		return response;
 	},

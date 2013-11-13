@@ -5,7 +5,6 @@ WayOfTheGymja.Models.ActivitySet = Backbone.Model.extend({
 	describe: function () {
 		var strParts = [];
 		var that = this;
-		// debugger
 		this.MEASURABLES.forEach(function (el) {
 			var val = that.get(el);
 			if (val != null) {

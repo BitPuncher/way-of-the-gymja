@@ -3,7 +3,7 @@ attributes :logged_date, :user_id, :id, :created_at, :updated_at
 child :activities, :object_root => false do
 	attributes	:activity_base_id, :id, :workout_id, :created_at, :updated_at
 	child :activity_base, :object_root => false do
-		attributes :name, :description, :set_type
+		attributes :name, :description, :set_type, :flavor
 	end
 	child :activity_sets, :object_root => false do
 		attributes :activity_id, :distance, :duration, :intensity, :repetitions,

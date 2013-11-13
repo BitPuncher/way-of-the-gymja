@@ -23,10 +23,11 @@ end
 gem 'jquery-rails'
 gem 'pg'
 gem 'devise'
+# gem 'twitter-bootstrap-rails'
 gem 'backbone-on-rails'
+gem 'underscore-rails'
 gem 'rabl'
 gem 'oj'
-gem 'twitter-bootstrap-rails'
 gem 'figaro'
 
 # To use ActiveModel has_secure_password

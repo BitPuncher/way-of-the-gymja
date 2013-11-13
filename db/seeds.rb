@@ -7,17 +7,22 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 ActiveRecord::Base.transaction do
 	ActivityBase.create({ name: "Water Running", 
-		description: "To splash is to err.", set_type: "Distance" })
-	ActivityBase.create({ name: "Stealth", description: "Ninja vanish!",
-		set_type: "Duration" })
+		flavor: "To splash is to err. -The Master", set_type: "Distance",
+		description: "Run like a ninja over the surface of the water" })
+	ActivityBase.create({ name: "Stealth", flavor: "Ninja vanish! -The Master",
+		set_type: "Duration",
+		description: "Blend into the shadows, avoiding all detection." })
 	ActivityBase.create({ name: "Taijutsu", 
-		description: "The lotus of Konoha blooms twice.", set_type: "General" })
+		flavor: "The lotus of Konoha blooms twice. -The Master", set_type: "General",
+		description: "Focus your ki into stronger punches and kicks." })
 	ActivityBase.create({ name: "Boulder Toss", 
-		description: "Sorry I'm late, I'm afraid I got lost on the path of life.",
-		set_type: "Weight" })
+		flavor: "Sorry I'm late, I'm afraid I got lost on the path of life. -The Master",
+		set_type: "Weight",
+		description: "Train strength and agility by hurling large bouldrs." })
 	ActivityBase.create({ name: "Genjutsu",
-		description: "How many times do I have to tell you? The first move is
-		 always a feint.", set_type: "Repetition" })
+		flavor: "How many times do I have to tell you? The first move is
+		 always a feint. -The Master", set_type: "Repetition",
+		 description: "Train the mind and practice the art of illusion and distraction" })
 
 	guest = User.create({ email: "guest@mail.com", password: "password",
 		gender: "male", height: 66, birthday: "1985-09-01" })

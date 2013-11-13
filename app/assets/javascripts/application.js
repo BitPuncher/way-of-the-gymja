@@ -12,9 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require twitter/bootstrap
 //= require underscore
 //= require backbone
+//= require bootstrap
 //= require way_of_the_gymja
 //= require_tree ../templates
 //= require_tree ./models
