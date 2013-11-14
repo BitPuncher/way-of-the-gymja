@@ -10,6 +10,8 @@ WayOfTheGymja.Routers.Workouts = Backbone.Router.extend({
 	},
 
 	activities: function () {
+		$(document).find('.active').toggleClass('active');
+		$(document).find('#activities-selector').toggleClass('active');
 		var that = this;
 
 		WayOfTheGymja.UserWorkouts = new WayOfTheGymja.Collections.Workouts();
@@ -30,6 +32,9 @@ WayOfTheGymja.Routers.Workouts = Backbone.Router.extend({
 
 	feed: function () {
 		//grabs activities + statuses and friend activities
+		$(document).find('.active').toggleClass('active');
+		$(document).find('#feed-selector').toggleClass('active');
+		this.topLevelElement.html('');
 	}
 
 	// workoutsCreate: function (user_id) {

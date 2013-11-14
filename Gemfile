@@ -23,7 +23,7 @@ end
 gem 'jquery-rails'
 gem 'pg'
 gem 'devise'
-# gem 'twitter-bootstrap-rails'
+gem 'twitter-bootstrap-rails'
 gem 'backbone-on-rails'
 gem 'underscore-rails'
 gem 'rabl'

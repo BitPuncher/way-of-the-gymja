@@ -2,6 +2,7 @@ WayOfTheGymja.Views.FormActivity = Backbone.View.extend({
 	initialize: function (options) {
 		this.activityBase = options.activity_base;
 		this.$el = options.$el;
+		this.parentView = options.parentView;
 	},
 
 	template: JST['tracker/form_activity'],
@@ -43,7 +44,9 @@ WayOfTheGymja.Views.FormActivity = Backbone.View.extend({
 		this.$el.append(content);
 	},
 
-	removeActivity: function () {
+	removeActivity: function (event) {
+		var base_id = $(event.currentTarget).data('base_id');
+		this.parentView.trigger('addListItem', WayOfTheGymja.ActivityBases.findWhere({ id: base_id }));
 		this.remove();
 	}
 })

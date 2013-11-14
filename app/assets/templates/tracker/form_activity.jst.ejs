@@ -3,7 +3,7 @@
 		<%= activityBase.get('name') %>
 		<input type="hidden" name="workout[activities][<%= activityBase.id %>][activity_base_id]"
 			value="<%= activityBase.id %>">
-		<a class="btn addSet" data-base_id="<%= activityBase.id %>"><i class="icon-plus"></i></a>
-		<button class="removeActivity">Remove Activity</button>
+		<a class="btn addSet" data-base_id="<%= activityBase.id %>"><i class="icon-plus"> Set</i></a>
+		<a class="btn removeActivity" data-base_id=<%= activityBase.id %>><i class="icon-trash"></i></a>
 	</div>
 </div>

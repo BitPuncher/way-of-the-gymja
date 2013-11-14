@@ -1,7 +1,36 @@
 #content-selector {
+	margin-top: 10px;
 	list-style: none;
 }
 
-/*.content {
-	padding: 60px;
-}*/
+.user-attributes {
+	color: white;
+	background-color: #384044;
+}
+
+.workout {
+	background-color: #FF8400;
+	padding: 25px;
+	margin-top: 10px;
+}
+
+.content {
+	background-color: #f7f2e9;
+}
+
+body {
+	position: absolute;
+	left: 10px;
+	right: 10px;
+}
+
+.drop-spot {
+	min-height: 40px;
+	border: solid gray 1px;
+	min-width: 100%;
+}
+
+.submit {
+	margin-top: 10px;
+}
+

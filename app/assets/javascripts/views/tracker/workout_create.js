@@ -16,6 +16,15 @@ WayOfTheGymja.Views.WorkoutCreate = Backbone.View.extend({
 		});
 
 		this.$el.html(content);
+
+		var that = this;
+		this.$el.droppable({accept:".activity", drop: function(event, ui) {
+			var activity_base = WayOfTheGymja.ActivityBases.findWhere({ id: 
+				ui.helper.data('id') });
+			that.addInput(activity_base)
+			ui.helper.remove();
+			},
+		});
 		return this;
 	},
 
@@ -30,6 +39,7 @@ WayOfTheGymja.Views.WorkoutCreate = Backbone.View.extend({
 		var formEntry = new WayOfTheGymja.Views.FormActivity({
 			activity_base: activity_base,
 			$el: el,
+			parentView: this,
 		})
 
 		formInputs.append(formEntry.render().$el);
@@ -69,7 +79,6 @@ WayOfTheGymja.Views.WorkoutCreate = Backbone.View.extend({
 			}
 		});
 
-		// var 
 	},
 
 	formAlert: function (message, classToggle) {

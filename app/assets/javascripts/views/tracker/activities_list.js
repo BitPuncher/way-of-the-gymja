@@ -10,17 +10,23 @@ WayOfTheGymja.Views.ActivitiesList = Backbone.View.extend({
 	},
 
 	addActivity: function (event) {
+		debugger;
 		var base_id = $(event.target).data('id');
 		this.trigger('addInput',
 			WayOfTheGymja.ActivityBases.findWhere({id: base_id}));
-	},
+	}, //deprecated
 
 	render: function () {
-		var content = this.template({
-			activities: this.collection,
-		});
+		this.$el.html('');
+		this.collection.each(this.addListItem.bind(this));
 
-		this.$el.html(content);
+		this.$el.find('.activity').draggable({revert:true});
 		return this;
+	},
+
+	addListItem: function (item) {
+		this.$el.append(this.template({
+			activity: item,
+		}));
 	},
 })
