@@ -1,17 +1,47 @@
-<h2>Sign in</h2>
+<div class="row-fluid">
+	<div class="span8 text-center sign-in-content">
+		<div class="row-fluid">
+			<div class="prompt">
+				<h5><p>Welcome to Way of the Gymja!</p>
+					<p>The go-to place for professional ninja self-training!</p></h5>
+			</div>
+		</div>
+		<div class="row-fluid">
+			<div class="span12 guest text-center">
+				<h3>Sign up and get started!  <i class="icon-chevron-right"></i></h3>
+				<br>
+				<!-- <hr /> -->
+				<h3>Or explore as a guest. </h3>
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
+				<form action="<%= user_session_url %>" method="post">
+					<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+					<input type="hidden" name="user[email]" value="guest@mail.com"></input>
+					<input type="hidden" name="user[password]" value="password"></input>
+					<button class="btn btn-large btn-inverse submit">
+						Try it Out
+					</button>
+				</form>
+			</div>
+		</div>
+	</div>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+	<div class="span4">
+		<h2>Sign in</h2>
 
-  <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%>
+		<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+		  <div><%= f.label :email %>
+		  <%= f.email_field :email, :autofocus => true %></div>
 
-  <div><%= f.submit "Sign in" %></div>
-<% end %>
+		  <div><%= f.label :password %>
+		  <%= f.password_field :password %></div>
 
-<%= render "devise/shared/links" %>
+		  <% if devise_mapping.rememberable? -%>
+		    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+		  <% end -%>
+
+		  <div><%= f.submit "Sign in" %></div>
+		<% end %>
+
+		<%= render "devise/shared/links" %>
+	</div>
+</div>

@@ -12,12 +12,12 @@
   }
 
   .navbar>.navbar-inner>.brand, .navbar>.navbar-inner>ul>li>a {
-  	color: white;
+  	color: #494948;
   	text-shadow: none;
   }
 
-  .navbar>.navbar-inner>.brand:hover {
-  	color: black;
+  .navbar>.navbar-inner>.brand:hover, .navbar>.navbar-inner>ul>li>a:hover {
+  	color: white;
   }
 
   .navbar {
@@ -46,3 +46,13 @@
   .user-attributes>.span {
   	border-left: solid white 1px;
   }
+
+  h1, h2, h3, h4, h5 {
+  color: #494948;
+}
+
+/*hr {
+  display: block; height: 1px;
+    border: 0; border-top: 1px solid #494948;
+    margin: 1em 0; padding: 0;
+}*/

@@ -24,6 +24,7 @@
       <% if current_user %>
         <li><a href="<%= user_url(current_user) %>">Profile</a></li>
         <li><a href="<%= track_url %>">Track</a></li>
+        <li><a class="" data-method="delete" href="<%= destroy_user_session_url %>">Logout</a></li>
       <% end %>
     </ul>
   </div>

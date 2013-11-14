@@ -2,10 +2,10 @@
 
 TODO:
 Get a few images up. 
-Guest login button. 
 Automated form button.
 Fix drag and drop crawl.
 Fix input form sizes.
+Stylize the login page.
 Add activity list sorting for re-adding items.
 
 Iga and Koga clans.
