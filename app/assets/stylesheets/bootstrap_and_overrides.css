@@ -6,6 +6,26 @@
   =require twitter-bootstrap-static/fontawesome
   */
 
+  .navbar>.navbar-inner {
+  	background-color: orange;
+  	background-image: none;
+  }
+
+  .navbar>.navbar-inner>.brand, .navbar>.navbar-inner>ul>li>a {
+  	color: white;
+  	text-shadow: none;
+  }
+
+  .navbar>.navbar-inner>.brand:hover {
+  	color: black;
+  }
+
+  .navbar {
+  	padding: 0px;
+  	margin-bottom: 0px;
+  	background-color: orange;
+  }
+
   .nav-list>.active>a, .nav-list>li>a:hover {
   	background-color: #494948 !important;
   	color: white;
@@ -21,4 +41,8 @@
   .activity {
   	margin-top: 5px;
   	min-width: 100%;
+  }
+
+  .user-attributes>.span {
+  	border-left: solid white 1px;
   }

@@ -25,15 +25,15 @@
 
 <div class="user-attributes row">
   <div class="span2 offset4 user-age">
-    <%= @user.birthday %>
+    Birthday: <%= @user.birthday %>
   </div>
 
   <div class="span2 user-height">
-    <%= @user.height / 12 %>'<%= @user.height % 12 %>"
+    Height: <%= @user.height / 12 %>'<%= @user.height % 12 %>"
   </div>
 
   <div class="span2 user-gender">
-    <%= @user.gender %>
+    <%= @user.gender.capitalize %>
   </div>
 </div>
 
@@ -43,17 +43,8 @@
       <li class="active" id="activities-selector"><a href="#/activities">Activities</a></li>
       <li id="feed-selector"><a href="#/feed">Feed</a></li>
     </ul>
-    <!-- <ul class="text-center" id="content-selector">
-      <li class="workouts selector">
-        <a class="btn" href="#/activities">Activities</a>
-      </li>
-      <li class="workouts selector">
-        <a class="btn notalink" href="#/feed">Feed</a>
-      </li> -->
-    </ul>
   </div>
 
   <div class="span8 offset1" id="backbone-content">
   </div>
 </div>
-
