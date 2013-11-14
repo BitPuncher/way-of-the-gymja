@@ -7,6 +7,7 @@ Fix drag and drop crawl.
 Fix input form sizes.
 Stylize the login page.
 Add activity list sorting for re-adding items.
+Expand landing page description. Maybe some jquery tour magic.
 
 Iga and Koga clans.
 
