@@ -3,6 +3,10 @@
 	list-style: none;
 }
 
+#activity-list {
+	padding-left: 10px;
+}
+
 .user-attributes {
 	color: white;
 	background-color: #384044;
@@ -21,6 +25,7 @@
 .content {
 	background-color: #f7f2e9;
 	padding-bottom: 5px;
+	min-height: 600px;
 }
 
 body {
