@@ -7,22 +7,51 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 ActiveRecord::Base.transaction do
 	ActivityBase.create({ name: "Water Running", 
-		flavor: "To splash is to err. -The Master", set_type: "Distance",
+		flavor: "To splash is to err.", set_type: "Distance",
 		description: "Run like a ninja over the surface of the water" })
-	ActivityBase.create({ name: "Stealth", flavor: "Ninja vanish! -The Master",
+	ActivityBase.create({ name: "Stealth", flavor: "Ninja vanish!",
 		set_type: "Duration",
 		description: "Blend into the shadows, avoiding all detection." })
 	ActivityBase.create({ name: "Taijutsu", 
-		flavor: "The lotus of Konoha blooms twice. -The Master", set_type: "General",
+		flavor: "The lotus of Konoha blooms twice.", set_type: "General",
 		description: "Focus your ki into stronger punches and kicks." })
 	ActivityBase.create({ name: "Boulder Toss", 
-		flavor: "Sorry I'm late, I'm afraid I got lost on the path of life. -The Master",
+		flavor: "Sorry I'm late, I'm afraid I got lost on the path of life.",
 		set_type: "Weight",
 		description: "Train strength and agility by hurling large bouldrs." })
 	ActivityBase.create({ name: "Genjutsu",
 		flavor: "How many times do I have to tell you? The first move is
-		 always a feint. -The Master", set_type: "Repetition",
+		 always a feint.", set_type: "Repetition",
 		 description: "Train the mind and practice the art of illusion and distraction" })
+	ActivityBase.create({ name: "Wall-Climbing", 
+		flavor: "The way of the ninja is rarely straight forward.",
+		set_type: "Distance",
+		description: "Climbing walls. What does it sound like?"})
+	ActivityBase.create({ name: "Throwing Stars",
+		flavor: "A ninja that can strike from a distance leaves no microfibers.",
+		set_type: "Repetiion",
+		description: "Throw ninja stars at targets of a set distance." })
+	ActivityBase.create({ name: "Nun-chucks",
+		flavor: "The sistine chapel wasn't painted in a day. Right, Mikey?",
+		set_type: "General",
+		description: "Weapons practice of a style with much flair." })
+	ActivityBase.create({ name: "Bo-Staff",
+		flavor: "Simple, effective, unyielding.",
+		set_type: "General",
+		description: "Weapons practice of a style suited to cleverness." })
+	ActivityBase.create({ name: "Sword",
+		flavor: "The blade of a ninja cuts both ways. Don't stand behind him.",
+		set_type: "General",
+		description: "If you want to be the leader, you have to use a Sword. Clearly." })
+	ActivityBase.create({ name: "Sai",
+		flavor: "Legend tells that the Sai has three points because of an ancient legent.",
+		set_type: "General",
+		description: "Weapons practice of a style suited to R-ratings." })
+	ActivityBase.create({ name: "Pushups",
+		flavor: "Once, I pushed down.",
+		set_type: "Repetition",
+		description: "Even ninjas can do pushups."
+		})
 
 	guest = User.create({ email: "guest@mail.com", password: "password",
 		gender: "male", height: 66, birthday: "1985-09-01", clan: "Koga", 

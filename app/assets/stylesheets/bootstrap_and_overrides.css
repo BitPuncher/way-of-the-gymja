@@ -78,6 +78,9 @@
     font-size: 18px;
   }
 
+  body {
+    max-width: 1250px;
+  }
 
 /*hr {
   display: block; height: 1px;
