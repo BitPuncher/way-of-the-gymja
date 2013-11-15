@@ -9,17 +9,19 @@
 
 .user-attributes {
 	color: white;
-	background-color: #384044;
+	background-color: #3B4044;
 	padding-top: 5px;
 	padding-bottom: 5px;
+	width: inherit;
 }
 
 .workout {
+	color: #494948;
 	background-color: #FF8400;
 	padding: 25px;
 	margin-top: 10px;
 	border-radius: 5px;
-	border: solid 1px #384044;
+	border: solid 1px #3B4044;
 }
 
 .content {
@@ -28,13 +30,14 @@
 	padding-left: 20px;
 	padding-right: 20px;
 	padding-bottom: 5px;
-	min-height: 600px;
+	min-height: 400px;
 }
 
 body {
 	position: absolute;
 	left: 25px;
 	right: 25px;
+	min-width: 800px;
 }
 
 .drop-spot {
@@ -59,4 +62,9 @@ html {
 
 p {
 	color: #494948;
+}
+
+.logo {
+	height: 200px;
+	width: 200px;
 }

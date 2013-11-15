@@ -12,7 +12,7 @@
   }
 
   .navbar>.navbar-inner>.brand, .navbar>.navbar-inner>ul>li>a {
-  	color: #494948;
+  	color: #3B4044;
   	text-shadow: none;
   }
 
@@ -23,18 +23,18 @@
   .navbar {
   	padding: 0px;
   	margin-bottom: 0px;
-  	background-color: orange;
+  	background-color: #FF8400;
   }
 
   .nav-list>.active>a, .nav-list>li>a:hover {
-  	background-color: #494948 !important;
+  	background-color: #3B4044 !important;
   	color: white;
   	text-shadow: none;
   }
 
   .nav-list>li>a {
   	background-color: transparent;
-  	color: #494948;
+  	color: #3B4044;
   	text-shadow: none;
   }
 
@@ -48,11 +48,16 @@
   }
 
   h1, h2, h3, h4, h5 {
-  color: #494948;
+    color: #494948;
+  }
+
+  .logo-row {
+    margin-left: 0px;
+    background-color: #f7f2e9;
 }
 
 /*hr {
   display: block; height: 1px;
-    border: 0; border-top: 1px solid #494948;
+    border: 0; border-top: 1px solid #3B4044;
     margin: 1em 0; padding: 0;
 }*/

@@ -25,7 +25,8 @@ ActiveRecord::Base.transaction do
 		 description: "Train the mind and practice the art of illusion and distraction" })
 
 	guest = User.create({ email: "guest@mail.com", password: "password",
-		gender: "male", height: 66, birthday: "1985-09-01" })
+		gender: "male", height: 66, birthday: "1985-09-01", clan: "Koga", 
+		username:"NinjaGuest" })
 
 	# First Workout
 
