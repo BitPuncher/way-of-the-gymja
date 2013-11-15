@@ -54,7 +54,30 @@
   .logo-row {
     margin-left: 0px;
     background-color: #f7f2e9;
-}
+  }
+
+  .set-row>.span2>input {
+    /*display: block;*/
+    width: inherit;
+  }
+
+  .set-row>.span2 {
+    display: inline-block;
+  }
+
+  html {
+    background-color: #3B4044;
+  }
+
+  p {
+    color: #494948;
+    font-size: 18px;
+  }
+
+  .profile-content {
+    font-size: 18px;
+  }
+
 
 /*hr {
   display: block; height: 1px;

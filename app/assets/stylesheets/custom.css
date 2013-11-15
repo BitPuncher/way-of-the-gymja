@@ -7,6 +7,10 @@
 	padding-left: 10px;
 }
 
+#content-selector>li {
+	font-size: 18px;
+}
+
 .user-attributes {
 	color: white;
 	background-color: #3B4044;
@@ -54,14 +58,6 @@ body {
 	background-color: #3B4044;
 	color: white;
 	padding: 5px;
-}
-
-html {
-	background-color: #3B4044;
-}
-
-p {
-	color: #494948;
 }
 
 .logo {

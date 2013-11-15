@@ -1,14 +1,12 @@
 **Fitocracy Clone
 
 TODO:
-Get a few images up. 1
 Automated form button. 3
 Fix drag and drop crawl.
-Fix input form sizes.
+Get form input labels to the left instead of on top.
 Add activity list sorting for re-adding items. 2
 Expand landing page description. Maybe some jquery tour magic.
 
-Iga and Koga clans.
 
 NYI:
 Followers

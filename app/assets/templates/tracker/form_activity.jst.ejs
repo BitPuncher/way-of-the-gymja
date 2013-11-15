@@ -1,6 +1,18 @@
 <div class="row activity_header">
 	<div class="span8">
-		<%= activityBase.get('name') %>
+		<div class="btn" data-target="#<%= activityBase.id %>-modal" data-toggle="modal"><%= activityBase.get('name') %></div>
+
+		<div id="<%= activityBase.id %>-modal" class="modal hide">
+			<div class="modal-header">
+				<h2><%= activityBase.get('name') %></h2>
+			</div>
+			<div class="modal-body">
+				<p class="description text-center"><%= activityBase.get('description') %></p>
+				<h5 class="flavor text-right"><em><%= activityBase.get('flavor') %></em></h5>
+			</div>
+		</div>
+
+
 		<input type="hidden" name="workout[activities][<%= activityBase.id %>][activity_base_id]"
 			value="<%= activityBase.id %>">
 		<a class="btn addSet" data-base_id="<%= activityBase.id %>"><i class="icon-plus"> Set</i></a>

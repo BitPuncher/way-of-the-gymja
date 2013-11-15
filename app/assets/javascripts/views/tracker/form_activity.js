@@ -31,7 +31,7 @@ WayOfTheGymja.Views.FormActivity = Backbone.View.extend({
 		}
 
 		var inputNumber = this.$el.find('.row').length;
-		var content = $('<div class="row" data-setNum=' + inputNumber + '></div>');
+		var content = $('<div class="row set-row" data-setNum=' + inputNumber + '></div>');
 
 		var template_string = 'activity_bases/' +
 			this.activityBase.get('set_type').toLowerCase();

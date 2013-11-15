@@ -17,7 +17,12 @@ WayOfTheGymja.Views.ActivitiesList = Backbone.View.extend({
 		var content = this.template({
 			activity: item,
 		});
-		content = $(content).draggable({ revert: true });
 		this.$el.append(content);
+		this.$el.html(this.$el.children().sort(this.compareActivities));
+		this.$el.children().draggable({ revert: true });
+	},
+
+	compareActivities: function (act1, act2) {
+		return $(act1).data('id') - $(act2).data('id');
 	},
 })

@@ -22,9 +22,14 @@
     <ul class="nav">
       <!-- <li class="active"><a href="#"></a></li> -->
       <% if current_user %>
-        <li><a href="<%= user_url(current_user) %>">Profile</a></li>
-        <li><a href="<%= track_url %>">Track</a></li>
-        <li><a class="" data-method="delete" href="<%= destroy_user_session_url %>">Logout</a></li>
+        <li><a id="profile-nav" href="<%= user_url(current_user) %>"><i class="icon-user"></i></a></li>
+        <li><a id="track-nav" href="<%= track_url %>"><i class="icon-pencil"></i></a></li>
+        <li><a id="logout-nav" data-method="delete" href="<%= destroy_user_session_url %>"><i class="icon-off"></i></a></li>
+        <script>
+            $('#profile-nav').tooltip({ animation:true, placement:"bottom", delay:100, title:"Profile" })
+            $('#track-nav').tooltip({ animation:true, placement:"bottom", delay:100, title:"Track" })
+            $('#logout-nav').tooltip({ animation:true, placement:"bottom", delay:100, title:"Logout" })
+        </script>
       <% end %>
     </ul>
   </div>
