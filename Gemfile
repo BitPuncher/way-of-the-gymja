@@ -30,6 +30,7 @@ gem 'rabl'
 gem 'oj'
 gem 'figaro'
 gem 'aws-sdk-core'
+gem 'newrelic_rpm'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
