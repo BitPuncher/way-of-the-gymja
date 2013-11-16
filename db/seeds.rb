@@ -29,7 +29,7 @@ ActiveRecord::Base.transaction do
 		description: "Climbing walls. What does it sound like?"})
 	ActivityBase.create({ name: "Throwing Stars",
 		flavor: "A ninja that can strike from a distance leaves no microfibers.",
-		set_type: "Repetiion",
+		set_type: "Repetition",
 		description: "Throw ninja stars at targets of a set distance." })
 	ActivityBase.create({ name: "Nun-chucks",
 		flavor: "The sistine chapel wasn't painted in a day. Right, Mikey?",
